@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import md5 from 'md5'
 import LoginForm from './LoginForm'
-import { Link , useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import styled from 'styled-components'
 

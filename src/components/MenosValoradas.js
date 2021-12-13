@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Button, Card } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import styled from "styled-components"
 import Puntaje from "./Puntaje"
 import poster from "../resources/Poster.jpg"
@@ -44,7 +44,7 @@ const MenosValoradas = () => {
     }, [])
     
     const imgNull = (imgUrl) => {
-        if(imgUrl == "https://image.tmdb.org/t/p/w300null"){
+        if(imgUrl === "https://image.tmdb.org/t/p/w300null"){
             return poster
         }else{
             return imgUrl
