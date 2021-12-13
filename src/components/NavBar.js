@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from "../resources/logo-blockBuster.png"
+import logo from "../resources/blockmaster.png"
 import primary from "../resources/primary.png"
 
 const StyledNav = styled.div`
@@ -41,6 +41,7 @@ export default class NavBar extends Component {
                     <Link to="/masvaloradas" style={{color:"white"}} className="nav-link">Más valoradas</Link>
                     <Link to="/menosvaloradas" style={{color:"white"}} className="nav-link">Menos valoradas</Link>
                     <Link to="/registro" style={{color:"white"}} className="nav-link">Registrarse</Link>
+                    <Link to="/login" style={{color:"white"}} className="nav-link">Login</Link>
                     <StyledBar>
                         <StyledInput type="text" placeholder="Busca tu película favorita" />  
                         <img src={primary} alt=""/>

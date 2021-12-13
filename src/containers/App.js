@@ -6,13 +6,19 @@ import Todas from '../components/Todas'
 import MasValoradas from '../components/MasValoradas'
 import MenosValoradas from '../components/MenosValoradas'
 import Registro from '../components/Registro'
+import RegisterForm from "../components/RegisterForm"
+import Slider from '../components/Slider'
+import Login from '../components/Login'
+
 
 const StyledPrincipal = styled.div`
 font-family: 'Montserrat', sans-serif;
 background-color: #0F0E17;
-width: 100vw;
-height: 100vh;
+height: max-content;
 color: white;
+min-height: 100vh;
+overflow: hidden;
+
 
 `
 
@@ -27,6 +33,8 @@ export default class App extends Component {
                     <Route path='/masvaloradas' element={<MasValoradas/>}/>
                     <Route path='/menosvaloradas' element={<MenosValoradas/>}/>
                     <Route path='/registro'  element={<Registro/>}/>
+                    <Route path='/login'  element={<Login/>}/>
+                    
                     </Routes>
                 </Router>
             </StyledPrincipal>
