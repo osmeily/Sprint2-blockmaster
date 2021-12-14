@@ -6,8 +6,6 @@ import Todas from '../components/Todas'
 import MasValoradas from '../components/MasValoradas'
 import MenosValoradas from '../components/MenosValoradas'
 import Registro from '../components/Registro'
-import RegisterForm from "../components/RegisterForm"
-import Slider from '../components/Slider'
 import Login from '../components/Login'
 
 
