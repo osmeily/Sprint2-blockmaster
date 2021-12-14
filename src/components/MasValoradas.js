@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Button, Card } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import styled from "styled-components"
 import Puntaje from "./Puntaje"
 import Slider from "./Slider"

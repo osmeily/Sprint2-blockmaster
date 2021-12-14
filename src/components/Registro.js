@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Swal from 'sweetalert2'
 import axios from 'axios'
 import md5 from 'md5'
 import uuid from 'react-uuid'
-import { useNavigate } from 'react-router-dom'
 import RegisterForm from './RegisterForm'
 import styled from 'styled-components'
 import {Navigate} from "react-router-dom"
@@ -22,18 +21,18 @@ color:white;
 width:100%;
 `;
 
-    const history = useNavigate()
+    // const history = useNavigate()
 
-    const [user, setUser] = useState({
-        id: '',
-        nombre: '',
-        apellido: '',
-        email: '',
-        username: '',
-        password: ''
-    })
+    // const [user, setUser] = useState({
+    //     id: '',
+    //     nombre: '',
+    //     apellido: '',
+    //     email: '',
+    //     username: '',
+    //     password: ''
+    // })
     let urlUser = "https://blockmaster.herokuapp.com/usuarios"
-    const [error, setError] = useState('')
+    // const [error, setError] = useState('')
 
     const Registro = async datos => {
         console.log(datos)
@@ -61,7 +60,7 @@ width:100%;
     return (
         
             <Contenedor>
-                <RegisterForm Registro={Registro} error={error} />
+                <RegisterForm Registro={Registro}/>
             </Contenedor>
         
     )

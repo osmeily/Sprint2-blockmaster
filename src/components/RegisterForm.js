@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+
 import styled from 'styled-components';
 
 const Formulario = styled.form`
@@ -32,8 +32,8 @@ const Buttons = styled.input`
     background:#FED941;
 `;
 
-const RegisterForm = ({Registro,error}) => {
-    const history = useNavigate()
+const RegisterForm = ({Registro}) => {
+    // const history = useNavigate()
 
 
     const [datos,setDatos] = useState({
@@ -49,9 +49,9 @@ const RegisterForm = ({Registro,error}) => {
         Registro(datos)
     }
 
-    const handleRedirect = () => {
-        history.push('/blockmaster/')
-    }
+    // const handleRedirect = () => {
+    //     history.push('/blockmaster/')
+    // }
 
     
     

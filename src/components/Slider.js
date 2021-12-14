@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import styled from 'styled-components'
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from "react-icons/fa"
 import '../../src/styles/slider.css'
-import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap'
+import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap'
 import play from "../resources/Vector (1).png"
 import mas from "../resources/mas.png"
 

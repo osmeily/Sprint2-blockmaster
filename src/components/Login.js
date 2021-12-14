@@ -58,6 +58,7 @@ const Login = () => {
 
     useEffect(() => {
         subirData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [datosLogin])
 
     const handleChange = (e) => {
