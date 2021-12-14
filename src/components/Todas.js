@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Button, Card } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 import styled from "styled-components"
 import Puntaje from "./Puntaje"
 import Slider from "./Slider"
@@ -39,6 +39,7 @@ const Todas = () => {
 
     useEffect(() => {
         fetchApi()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     return (
@@ -51,7 +52,7 @@ const Todas = () => {
                     return ( 
                     <Card style={{ width: '12rem', border: 'none' }}>
                         <Puntaje vote_average={movie.vote_average}/>
-                        <Card.Img variant="top" src={"https://image.tmdb.org/t/p/"+"w300"+movie.poster_path} />
+                        <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w300"+movie.poster_path} />
                         </Card>
                         )
                 })

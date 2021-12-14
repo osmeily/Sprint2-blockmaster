@@ -52,7 +52,7 @@ const MasValoradas = () => {
                     return ( 
                     <Card style={{ width: '12rem', border: 'none' }}>
                         <Puntaje vote_average={movie.vote_average}/>
-                        <Card.Img variant="top" src={"https://image.tmdb.org/t/p/"+"w300"+movie.poster_path} />
+                        <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w300"+movie.poster_path} />
                         </Card>
                         )
                 })
