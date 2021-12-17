@@ -8,6 +8,8 @@ import styled from 'styled-components'
 
 let urlUser = "https://blockmaster.herokuapp.com/usuarios"
 
+
+
 const Contenedor = styled.div`
 display:flex;
 flex-direction:column;
@@ -19,10 +21,9 @@ width:100%;
 `;
 const Login = () => {
 
-    const history = useNavigate()
-
     const [check, setCheck] = useState(false)
     const [datosLogin, setDatosLogin] = useState('')
+    const navigate = useNavigate()
 
     const Login = async datos => {
         await axios.get(urlUser, {
@@ -67,7 +68,7 @@ const Login = () => {
     }
 
     const handleRedirect = () => {
-        history.push('/blockmaster/peliculas')
+        navigate("/")
     }
 
     const subirData = () => {

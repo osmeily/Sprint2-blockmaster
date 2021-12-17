@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import logo from "../resources/blockmaster.png"
 import primary from "../resources/primary.png"
@@ -20,7 +20,7 @@ text-align: center;
 
 `
 
-const StyledBar = styled.div` 
+const StyledBar = styled.form` 
 margin-right: -370px;
 margin-left: 200px;
 `
@@ -33,8 +33,28 @@ border-radius: 8px 0px 0px 8px;
 
 `
 
-export default class NavBar extends Component {
-    render() {
+const StyledButton = styled.button`
+margin: 0;
+padding: 0;
+border: none;
+
+`
+
+
+
+const NavBar = () => {
+    
+    const [searchText, setSearchText] = useState("")
+
+    const navigate = useNavigate()
+
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        navigate("/?search=" + searchText)
+
+    }
+
         return (
             <StyledNav>
                 <Nav>
@@ -44,14 +64,17 @@ export default class NavBar extends Component {
                     <Link to="/menosvaloradas" style={{color:"white"}} className="nav-link">Menos valoradas</Link>
                     <Link to="/registro" style={{color:"white"}} className="nav-link">Registrarse</Link>
                     <Link to="/login" style={{color:"white"}} className="nav-link">Login</Link>
-                    <StyledBar>
-                        <StyledInput type="text" placeholder="Busca tu película favorita" />  
+                    <StyledBar onSubmit={handleSubmit}>
+                        <StyledInput type="text" placeholder="Busca tu película favorita" value={searchText} onChange={(e)=> setSearchText(e.target.value)}/>  
+                        <StyledButton  type='submit'>
                         <img src={primary} alt=""/>
+                        </StyledButton>
                     </StyledBar>
                 </Nav>
             </StyledNav>
             
         )
     }
-}
+
+export default NavBar
 
