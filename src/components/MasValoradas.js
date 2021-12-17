@@ -27,7 +27,7 @@ overflow: hidden;
 
 
 const MasValoradas = () => {
-    const url = "http://api.themoviedb.org/3/discover/movie?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=325b96410b79d7f125650415ad9ff55c"
+    const url = "https://api.themoviedb.org/3/discover/movie?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=325b96410b79d7f125650415ad9ff55c"
     
     const [movies, setMovies] = useState([])
 
