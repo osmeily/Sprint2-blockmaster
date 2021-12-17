@@ -56,8 +56,6 @@ const Detalle = () => {
 
     const id = getLocalStorage()
 
-    
-    
     const url = `"https://api.themoviedb.org/3/movie/${id}?api_key=325b96410b79d7f125650415ad9ff55c"`
     console.log(url)
 

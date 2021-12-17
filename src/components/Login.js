@@ -93,6 +93,7 @@ const Login = () => {
                     name=""
                     id="valSes"
                     onChange={handleChange}
+                    onClick={handleRedirect}
                 />
             </span>
 

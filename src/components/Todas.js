@@ -29,22 +29,26 @@ text-decoration: none;
 
 
 const Todas = () => {
-    const url = "https://api.themoviedb.org/3/discover/movie?pagesort_by=popularity.desc&api_key=325b96410b79d7f125650415ad9ff55c&"
+
+
     
     const [movies, setMovies] = useState([])
     const [page, setPage] = useState(1)
+    
+    const url = "https://api.themoviedb.org/3/discover/movie?pagesort_by=popularity.desc&api_key=325b96410b79d7f125650415ad9ff55c&page="+page
 
     const fetchApi = async() => {
         const response = await fetch(url)
         console.log(response.status);
         const data = await response.json()
-        setMovies(data.results);
+        setMovies(prevMovies => prevMovies.concat(data.results))
         console.log(movies);
     }
 
 
     useEffect(() => {
         fetchApi()
+        
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page])
     

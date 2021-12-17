@@ -37,6 +37,14 @@ const Slider = () => {
         {
             "img" :  "https://image.tmdb.org/t/p/w1280/g2djzUqA6mFplzC03gDk0WSyg99.jpg",
             "id" : 3
+        },
+        {
+            "img" :  "http://image.tmdb.org/t/p/w1280/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+            "id" : 4
+        },
+        {
+            "img" :  "http://image.tmdb.org/t/p/w1280/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
+            "id" : 5
         }
     ]
 
@@ -44,16 +52,18 @@ const Slider = () => {
         {
             0: "https://www.youtube.com/embed/F4Ygcigj0Gk",
             1: "https://www.youtube.com/embed/HjzATzdlN2A",
-            2: "https://www.youtube.com/embed/E4dCY_DvT-4"
+            2: "https://www.youtube.com/embed/E4dCY_DvT-4",
+            3: "https://www.youtube.com/embed/IR_OJ_sdKVA",
+            4: "https://www.youtube.com/embed/-AwLMRgcEoA"
         }
 
     const nextSlide = () => {
-        setSlider(slider === 2 ? 0 : slider +1)
+        setSlider(slider === 4 ? 0 : slider +1)
         console.log(slider)
     }
 
     const prevSlide = () => {
-        setSlider(slider === 0 ? 2 : slider -1)
+        setSlider(slider === 0 ? 4 : slider -1)
         console.log(slider)
     }
 

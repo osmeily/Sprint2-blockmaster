@@ -21,8 +21,7 @@ text-align: center;
 `
 
 const StyledBar = styled.form` 
-margin-right: -370px;
-margin-left: 200px;
+
 `
 
 const StyledInput = styled.input` 
@@ -43,18 +42,27 @@ border: none;
 
 
 const NavBar = () => {
-    
-    const [searchText, setSearchText] = useState("")
+
+const [searchText, setSearchText] = useState("")
 
     const navigate = useNavigate()
 
-    
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = ({target}) => {
+        setSearchText(target.value)
         navigate("/?search=" + searchText)
-
     }
 
+    const handleSubmitText= (e) => {
+        e.preventDefault()
+        console.log(searchText)
+        localStorage.setItem("keyword", searchText)
+    }
+
+    const redireccion = () => {
+        navigate("/busqueda")
+    }
+    
+    
         return (
             <StyledNav>
                 <Nav>
@@ -64,9 +72,9 @@ const NavBar = () => {
                     <Link to="/menosvaloradas" style={{color:"white"}} className="nav-link">Menos valoradas</Link>
                     <Link to="/registro" style={{color:"white"}} className="nav-link">Registrarse</Link>
                     <Link to="/login" style={{color:"white"}} className="nav-link">Login</Link>
-                    <StyledBar onSubmit={handleSubmit}>
-                        <StyledInput type="text" placeholder="Busca tu película favorita" value={searchText} onChange={(e)=> setSearchText(e.target.value)}/>  
-                        <StyledButton  type='submit'>
+                    <StyledBar onSubmit={handleSubmitText}>
+                        <StyledInput type="text" placeholder="Busca tu película favorita" value={searchText} onChange={handleSubmit}/>  
+                        <StyledButton  type='submit' onClick={redireccion}>
                         <img src={primary} alt=""/>
                         </StyledButton>
                     </StyledBar>
