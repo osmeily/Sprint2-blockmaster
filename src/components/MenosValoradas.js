@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Puntaje from "./Puntaje"
 import poster from "../resources/Poster.jpg"
 import Slider from "./Slider"
+import { Link } from "react-router-dom"
 
 
 const StyledMenosv = styled.div` 
@@ -54,17 +55,19 @@ const MenosValoradas = () => {
     return (
         <StyledMenosv>
             <Slider/>
-            <Styledh1>Películas más valoradas</Styledh1>
+            <Styledh1>Películas menos valoradas</Styledh1>
             <Styledpeli>
             {
                 movies.map(movie => {
                     let imgPoster = imgNull(`https://image.tmdb.org/t/p/w300${movie.poster_path}`)
                     console.log(imgPoster)
                     return ( 
-                    <Card style={{ width: '12rem', border: 'none' }}>
+                        <Link to={"/detalle/"+ movie.id} style={{textDecoration: "none", color: "white"}}>
+                    <Card style={{ width: '12rem', border: 'none' }} onClick={() => JSON.stringify(localStorage.setItem("id", movie.id))}>
                         <Puntaje vote_average={movie.vote_average}/>
                         <Card.Img style={{ height: '100%' }} variant="top" src={imgPoster} />
                         </Card>
+                        </Link>
                         )
                 })
             }

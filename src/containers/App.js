@@ -7,6 +7,7 @@ import MasValoradas from '../components/MasValoradas'
 import MenosValoradas from '../components/MenosValoradas'
 import Registro from '../components/Registro'
 import Login from '../components/Login'
+import Detalle from '../components/Detalle'
 
 
 const StyledPrincipal = styled.div`
@@ -28,6 +29,7 @@ export default class App extends Component {
                     <NavBar/>
                     <Routes>
                     <Route path='/' exact element={<Todas/>}/>
+                    <Route path='/detalle/:movieId' element={<Detalle/>}/>
                     <Route path='/masvaloradas' element={<MasValoradas/>}/>
                     <Route path='/menosvaloradas' element={<MenosValoradas/>}/>
                     <Route path='/registro'  element={<Registro/>}/>

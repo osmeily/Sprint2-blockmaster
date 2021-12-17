@@ -16,11 +16,13 @@ justify-content: center;
 width: 1366px;
 height: 112px;
 position: relative;
+text-align: center;
 
 `
 
 const StyledBar = styled.div` 
-
+margin-right: -370px;
+margin-left: 200px;
 `
 
 const StyledInput = styled.input` 
